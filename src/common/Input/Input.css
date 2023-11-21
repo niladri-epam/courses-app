@@ -1,7 +1,36 @@
 .textinput {
   height: 35px;
-  width: 24em;
+  outline: none;
   margin-right: 10px;
   text-indent: 10px;
   border: 1px solid gray;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.inputGroup p {
+  margin: 0;
+  font-size: 0.8em;
+  color: red;
+  font-weight: 600;
+}
+
+.marginVertical {
+  margin: 15px 0px;
+}
+
+.marginHorizontal {
+  margin: 0px 15px;
+}
+
+.errorInput {
+  border: 2px solid red;
 }
