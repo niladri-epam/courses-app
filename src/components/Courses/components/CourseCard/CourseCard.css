@@ -1,0 +1,43 @@
+.card {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 25px;
+  border-left: 6px solid black;
+  box-shadow: 5px 5px 8px 0px gray;
+  margin: 30px 0;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContent p {
+  margin: 0;
+}
+
+.cardBody {
+  width: 60%;
+}
+
+.cardFooter {
+  width: 30%;
+}
+
+.cardExtraInfo {
+  margin-bottom: 20px;
+}
+
+.cardExtraInfo p {
+  font-size: 14px;
+}
+
+.cardExtraInfo span {
+  font-weight: bold;
+}
+
+.authors {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

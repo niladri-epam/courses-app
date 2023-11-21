@@ -1,0 +1,22 @@
+.header {
+  height: 82px;
+  background: #fc5050;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  width: 200px;
+  height: 100%;
+  padding: 12px 0px 0px 52px;
+}
+
+.user {
+  display: flex;
+  padding: 20px 20px;
+}
+
+.username {
+  margin-right: 10px;
+  text-transform: uppercase;
+}

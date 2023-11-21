@@ -1,0 +1,30 @@
+.courseMetaData td {
+  min-width: 100px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.courseInfoContainer {
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+}
+
+.courseInfoSubContainer {
+  margin: 5% 0%;
+  display: flex;
+}
+
+.courseInfoBody {
+  padding: 0 5%;
+  width: 60%;
+}
+
+.courseMetaData {
+  padding: 0 5%;
+  border-left: 1px solid silver;
+}
+
+.back {
+  text-align: right;
+  margin-top: 30px;
+}
