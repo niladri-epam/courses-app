@@ -41,3 +41,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.cardControls {
+  display: flex;
+  justify-content: space-between;
+}

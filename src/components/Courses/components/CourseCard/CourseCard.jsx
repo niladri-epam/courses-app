@@ -5,7 +5,7 @@ import { formatCreationDate } from '../../../../helpers/formatCreationDate';
 import './CourseCard.css';
 import { formatAuthors } from '../../../../helpers/formatAuthors';
 
-const CourseCard = ({ course, selectCourseInfo }) => {
+const CourseCard = ({ course, selectCourseInfo, isLoggedIn }) => {
 	const { title, description, authors, duration, creationDate } = course;
 	return (
 		<>
@@ -27,10 +27,30 @@ const CourseCard = ({ course, selectCourseInfo }) => {
 								<span>Created:</span> {formatCreationDate(creationDate)}
 							</p>
 						</div>
-						<Button
-							buttonText='show course'
-							buttonTrigger={() => selectCourseInfo(course)}
-						/>
+						<div className='cardControls'>
+							<div className='cardShowCourse'>
+								<Button
+									buttonText='show course'
+									buttonTrigger={() => selectCourseInfo(course)}
+								/>
+							</div>
+							{isLoggedIn ? (
+								<>
+									<div className='cardDelete'>
+										<Button buttonTrigger={() => {}}>
+											<span class='material-symbols-outlined'>delete</span>
+										</Button>
+									</div>
+									<div className='cardEdit'>
+										<Button buttonTrigger={() => {}}>
+											<span class='material-symbols-outlined'>edit</span>
+										</Button>
+									</div>
+								</>
+							) : (
+								''
+							)}
+						</div>
 					</div>
 				</div>
 			</div>

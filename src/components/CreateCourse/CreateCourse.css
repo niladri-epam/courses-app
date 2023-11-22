@@ -1,0 +1,49 @@
+.createCourseWrapper {
+  background: #efefef;
+}
+
+.createCoursecontainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.createCourseForm {
+  background: white;
+  padding: 4% 10%;
+  border: 1px solid #bababa;
+  border-radius: 5px;
+}
+
+.duratonSection {
+  display: flex;
+}
+
+.authorSection {
+  display: flex;
+}
+
+.authorListComponent {
+  display: flex;
+}
+
+.createCourseFooter {
+  display: flex;
+}
+
+.footerControls {
+  display: flex;
+}
+
+.authors span {
+  cursor: pointer;
+}
+
+.footerControls {
+  padding: 10px 0px 56px 0px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.createbtn {
+  margin-right: 10px;
+}

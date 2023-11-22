@@ -1,10 +1,10 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({ buttonText, buttonTrigger }) => {
+const Button = ({ buttonText, buttonTrigger, type = 'button', children }) => {
 	return (
-		<button className='btn' onClick={buttonTrigger}>
-			{buttonText}
+		<button className='btn' type={type} onClick={buttonTrigger}>
+			{buttonText ? buttonText : children}
 		</button>
 	);
 };
