@@ -3,7 +3,7 @@ import Button from '../../common/Button/Button';
 import Input from '../../common/Input/Input';
 import './Login.css';
 import { makeRequest } from '../../helpers/apiTrigger';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 	const navigate = useNavigate();
@@ -43,7 +43,6 @@ const Login = () => {
 		});
 
 		if (data && data.successful) {
-			alert(`Login Success`);
 			localStorage.setItem('apiToken', data.result);
 			localStorage.setItem('userDetail', JSON.stringify(data.user));
 		} else {
@@ -69,8 +68,8 @@ const Login = () => {
 	};
 
 	return (
-		<div className='wrapper'>
-			<div className='container'>
+		<div className='authWrapper'>
+			<div className='authContainer'>
 				<h2 className='registrationHeader'>Login</h2>
 				<form className='registrationForm' onSubmit={loginHandler}>
 					<Input
@@ -93,6 +92,12 @@ const Login = () => {
 						type='password'
 					/>
 					<Button buttonText='Login' type='submit' buttonTrigger={() => {}} />
+					<p>
+						If you don't have an account you may{' '}
+						<Link to={'/registration'}>
+							<b>Registration</b>
+						</Link>
+					</p>
 				</form>
 			</div>
 		</div>

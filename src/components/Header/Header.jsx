@@ -4,23 +4,12 @@ import Button from '../../common/Button/Button';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ user, isLoggedIn, logoutHandler }) => {
 	const navigate = useNavigate();
 
-	const [user, setUser] = useState({ name: '', email: '' });
-	const logoutHandler = () => {
-		localStorage.setItem('apiToken', '');
-		localStorage.setItem('userDetail', '');
-		setTimeout(() => {
-			navigate('/login');
-		}, 500);
+	const loginHandler = () => {
+		navigate('/login');
 	};
-	useEffect(() => {
-		const user = localStorage.getItem('userDetail');
-		if (user) {
-			setUser({ name: user.name, email: user.email });
-		}
-	}, []);
 
 	return (
 		<div className='header'>
@@ -28,10 +17,18 @@ const Header = () => {
 				<Logo />
 			</div>
 			<div className='user'>
-				<div className='username'>
-					<p>{user.name}</p>
-				</div>
-				<Button buttonText='Logout' buttonTrigger={logoutHandler} />
+				{isLoggedIn ? (
+					<div className='username'>
+						<p>{user.name}</p>
+					</div>
+				) : (
+					''
+				)}
+				{isLoggedIn ? (
+					<Button buttonText='Logout' buttonTrigger={logoutHandler} />
+				) : (
+					<Button buttonText='Login' buttonTrigger={loginHandler} />
+				)}
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@ import Button from '../../common/Button/Button';
 import Input from '../../common/Input/Input';
 import './Registration.css';
 import { makeRequest } from '../../helpers/apiTrigger';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Registration = () => {
 	const navigate = useNavigate();
@@ -76,8 +76,8 @@ const Registration = () => {
 	};
 
 	return (
-		<div className='wrapper'>
-			<div className='container'>
+		<div className='authWrapper'>
+			<div className='authContainer'>
 				<h2 className='registrationHeader'>Registration</h2>
 				<form className='registrationForm' onSubmit={registrationHandler}>
 					<Input
@@ -113,6 +113,12 @@ const Registration = () => {
 						type='submit'
 						buttonTrigger={() => {}}
 					/>
+					<p>
+						If you have an account you may{' '}
+						<Link to={'/login'}>
+							<b>Login</b>
+						</Link>
+					</p>
 				</form>
 			</div>
 		</div>
